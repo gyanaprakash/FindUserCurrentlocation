@@ -14,6 +14,8 @@
 		BCB565271A36CDF0004AADFC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCB565261A36CDF0004AADFC /* Images.xcassets */; };
 		BCB5652A1A36CDF0004AADFC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB565281A36CDF0004AADFC /* LaunchScreen.xib */; };
 		BCB565361A36CDF0004AADFC /* YAACLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB565351A36CDF0004AADFC /* YAACLocationTests.m */; };
+		BCB565401A36D007004AADFC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB5653F1A36D007004AADFC /* CoreLocation.framework */; };
+		BCB565421A36FF25004AADFC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB565411A36FF25004AADFC /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		BCB5652F1A36CDF0004AADFC /* YAACLocationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YAACLocationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB565341A36CDF0004AADFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCB565351A36CDF0004AADFC /* YAACLocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YAACLocationTests.m; sourceTree = "<group>"; };
+		BCB5653F1A36D007004AADFC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BCB565411A36FF25004AADFC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCB565421A36FF25004AADFC /* MapKit.framework in Frameworks */,
+				BCB565401A36D007004AADFC /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,8 @@
 		BCB5650D1A36CDF0004AADFC = {
 			isa = PBXGroup;
 			children = (
+				BCB565411A36FF25004AADFC /* MapKit.framework */,
+				BCB5653F1A36D007004AADFC /* CoreLocation.framework */,
 				BCB565181A36CDF0004AADFC /* YAACLocation */,
 				BCB565321A36CDF0004AADFC /* YAACLocationTests */,
 				BCB565171A36CDF0004AADFC /* Products */,
