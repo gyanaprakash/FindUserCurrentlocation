@@ -43,6 +43,6 @@
 	<key>privacy - location usage description</key>
 	<string>I need Location</string>
 	<key>LSApplicationCategoryType</key>
-	<string></string>
+	<string>public.app-category.photography</string>
 </dict>
 </plist>

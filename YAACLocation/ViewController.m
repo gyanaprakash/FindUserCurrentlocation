@@ -38,7 +38,7 @@
 - (IBAction)findCurrentLocation:(UIButton *)sender
 {
     locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
     locationManager.distanceFilter = 200.0f;
     
     [locationManager requestWhenInUseAuthorization];
@@ -72,17 +72,20 @@
     }
     
     // Stop Location Manager
+    
     [locationManager stopUpdatingLocation];
     [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
         NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
         if (error == nil && [placemarks count] > 0) {
             placemark = [placemarks lastObject];
-            _detail.text = [NSString stringWithFormat:@"%@ %@\n%@\n%@", placemark.locality, placemark.administrativeArea, placemark.country,placemark.postalCode];
+            _detail.text = [NSString stringWithFormat:@"%@ %@\n%@\n%@,\n%@,\n%@\n%@\n%@", placemark.locality, placemark.administrativeArea, placemark.country,placemark.postalCode,placemark.subLocality,placemark.subAdministrativeArea,placemark.accessibilityHint,placemark.country];
         } else {
-            NSLog(@"%@", error.debugDescription);
+            NSLog(@"complete");
         }
     } ];
 }
+
+
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
@@ -91,7 +94,7 @@
     zoomLocation.latitude = [_lat.text intValue];
     zoomLocation.longitude= [_longnitude.text intValue];
  
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 500, 500);
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 5, 5);
     [mapView setRegion:viewRegion animated:YES];
     // Add an annotation
     MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
@@ -102,18 +105,10 @@
     [mapView addAnnotation:point];
 }
 
+
+
 - (IBAction)maptype:(UIButton *)sender {
-//    [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-//        CGRect frame = self.maptype.frame;
-//        frame.origin.y = 0;
-//        frame.origin.x = 0;
-//        self.buttonview.frame=frame;
-//        
-//    } completion:^(BOOL finished) {
-//        NSLog(@"complete");
-//        [self.maptype addSubview:self.buttonview];
-//    }];
-    
+
 }
 
 - (void)didReceiveMemoryWarning
