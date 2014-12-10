@@ -70,9 +70,7 @@
         _lat.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
         _longnitude.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
     }
-    
-    // Stop Location Manager
-    
+        
     [locationManager stopUpdatingLocation];
     [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
         NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
