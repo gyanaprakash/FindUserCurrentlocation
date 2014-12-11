@@ -61,18 +61,8 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="Ain-3U-te9"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="thQ-mE-QHs">
-                                <rect key="frame" x="254" y="305" width="65" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="map type">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="maptype:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qdK-oy-iRe"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qAj-PU-rjV">
-                                <rect key="frame" x="55.999996871098062" y="281" width="190" height="30"/>
+                                <rect key="frame" x="55.999999597765296" y="281" width="190" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="FIND CURRENT LOCATION">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -89,7 +79,6 @@
                         <outlet property="lat" destination="5fF-74-2zf" id="Mce-Kh-PDJ"/>
                         <outlet property="longnitude" destination="LJ4-hE-Xa0" id="gpb-VI-IgC"/>
                         <outlet property="mapView" destination="dhn-af-XKk" id="mg9-xP-PCP"/>
-                        <outlet property="maptype" destination="thQ-mE-QHs" id="F83-9P-n4R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

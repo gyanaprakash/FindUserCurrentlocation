@@ -15,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lat;
 @property (weak, nonatomic) IBOutlet UILabel *longnitude;
 @property (weak, nonatomic) IBOutlet UILabel *detail;
-@property (weak, nonatomic) IBOutlet UIButton *maptype;
 
 - (IBAction)findCurrentLocation:(UIButton *)sender;
 

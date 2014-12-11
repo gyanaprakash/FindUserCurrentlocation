@@ -83,8 +83,6 @@
     } ];
 }
 
-
-
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     
@@ -103,11 +101,6 @@
     [mapView addAnnotation:point];
 }
 
-
-
-- (IBAction)maptype:(UIButton *)sender {
-
-}
 
 - (void)didReceiveMemoryWarning
 {
